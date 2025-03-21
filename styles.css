@@ -1,6 +1,4 @@
-* {
-    -webkit-tap-highlight-color: transparent;
-}
+
 
 /* Base styles */
 
@@ -1023,7 +1021,7 @@ main {
     .intro-part {
         position: relative;
         width: 100%;
-        height:520px; /* Adjust as needed */
+        height:407px; /* Adjust as needed */
         background: url('your-image.jpg');
         background-size: cover;
         background-position: center;
@@ -1041,7 +1039,7 @@ main {
     }
   
     .ravi-photo {
-        width: 400px;
+        width: 320px;
     }
     .admin-button {
        position: absolute;
