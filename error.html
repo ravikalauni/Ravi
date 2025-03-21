@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: consolas;
+    }
+
+    .error-container {
+      text-align: center;
+      background-color: rgb(41, 41, 41);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 30px;
+    }
+
+    .error-title {
+      font-size: 36px;
+      color: #ff6347;
+      margin-bottom: 20px;
+    }
+
+    .error-message {
+      font-size: 18px;
+      color: #bbbbbb;
+      margin-bottom: 20px;
+    }
+
+    .home-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #0f0e0e;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+      background-color: #130000;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1 class="error-title">Oops! Something Went Wrong</h1>
+    <p class="error-message">The content you are finding is not available at this moment. Hope it will be updated soon.</p>
+    <button class="home-btn" onclick="window.location.href='/'">Go Back Home</button>
+  </div>
+</body>
+</html>

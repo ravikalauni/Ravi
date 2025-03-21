@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, red, black);
+    color: white;
+   
+}
+
+.container {
+    padding: 20px;
+    gap: 1px;
+   
+}
+header {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: block;
+    }
+    header h1 {
+        background: navy;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    header h2 {
+        background: red;
+        
+        padding: 5px;
+        font-size: 18px;
+        margin-top: -300px;
+        
+        
+    }
+}
+
+
+
+header h1 {
+    background: navy;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header h2 {
+    background: red;
+    display: inline-block;
+    padding:  15px;
+    font-size: 20px;
+    
+}
+
+.search-container {
+    position: relative;
+    margin: 10px auto;
+    width: 30%;
+    display: flex;
+}
+
+
+#search {
+    width: 80%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.699);
+    outline: none;
+    height: 30px;
+    border-radius: 3px;
+    color: white;
+}
+
+#search-btn {
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+   border: none;
+    color: white;
+    border-radius: 3px;
+    
+}
+
+.search-panel {
+    position: absolute;
+    top: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: hidden;
+}
+.messages .message {
+    background: rgba(0, 35, 41, 0.377);
+    padding: 10px;
+    margin: 10px auto;
+    text-align: left;
+    width: 40%;
+    display: flex;
+    font-size: 20px;
+    color: yellow;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.288);
+    border-radius: 0px 20px 20px 20px;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    right: 25%;
+}
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        position: relative;
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        margin-bottom: 30px;
+        background: transparent;
+    }
+    
+.messages .message {
+    background: rgba(77, 0, 0, 0.377);
+    padding: 10px;
+    margin: 10px auto;
+    text-align: left;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.288);
+    font-size: 15px;
+    position: relative;
+    left: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+    
+}
+
+
+
+.close-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: rgba(46, 0, 0, 0.384);
+    padding: 10px;
+}
+.close-btn:hover {
+    background-color: rgba(19, 0, 0, 0.384);
+}
+.content-item {
+    border: 1px solid rgba(255, 177, 177, 0.548);
+    padding: 3px;
+    background-color: rgba(83, 0, 0, 0.315);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.content-item:hover {
+    background-color: rgba(29, 0, 0, 0.315);
+    transition: 0.3s;
+}
+.content-item p {
+    margin-left: 10px
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    
+}
+
+.content-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.top-right-btn {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    padding: 12px;
+    background: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    border-radius: 2px;;
+}
+
+.privacy-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.privacy-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+}

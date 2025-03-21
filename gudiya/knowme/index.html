@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gudiya 0.01</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <ul>
+            <li><a href="../../index.html">Leave this page</a></li>
+            <li><a href="../about/index.html">About Gudiya</a></li>
+            <li><a href="../privacy/index.html">Your privacy</a></li>
+        </ul>
+    </div>
+    <p class="subtitle" style="text-align: right; cursor: pointer;">There are more Gudiyas </p>
+    
+    <div class="container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        
+        <h1>GUDIYA 0.1</h1>
+        
+
+        <p class="subtitle">Trust me! I can retrieve and analyze your connection with Ravi, it includes:</p>
+        <ul>
+            <li>Verifying if Ravi knows you.</li>
+            <li>Identifying when and how you both met.</li>
+            <li>Determining your relationship with him.</li>
+            <li>Interpreting his perception of you.</li>
+        </ul>
+        <div class="output-container" id="result"></div>
+        <div class="input-container">
+            <input type="text" id="nameInput" placeholder="Hey, just drop your name here!">
+            <button onclick="checkName()">➤</button>
+        </div>
+        <p class="note">Gudiya only supports names, not conversation.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

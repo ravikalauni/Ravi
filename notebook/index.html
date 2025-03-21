@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    
+    <title>Ravi Kalauni - Personal Website</title>
+    <link rel="stylesheet" href="css/notebook.css">
+</head>
+<body>
+    <div id="overlay">
+        <div class="form-container">
+            <h2>Varify that you belongs to his circle:</h2>
+            <p style="font-weight: bold;">Only his close ones can enter the page.</p>
+            <p>Enter your real name. Use the first letter capitalized and enter only your first name. Don't worry, your personal name won't be recorded or tracked. </p>
+            
+            <form method="post" action="" name="reader-form">
+            <input type="text" id="nameInput" name="your-name" placeholder="Enter your name">
+            <input class="hidden-form" type="text" name="your-number" placeholder="Number">
+			<input class="hidden-form" type="email" name="your-email" placeholder="Email">
+			<textarea class="hidden-form" name="message" rows="7" placeholder="Your Message"></textarea><br><br>
+            <a href="../home.html"><button >Go back</button></a>
+            
+            <button onclick="submitName()" id="submit" value="submit" type="submit">Submit</button><br><br></form>
+            <a href="privacy/privacy.html"><button style="background: transparent; text-decoration: underline; color: skyblue;"> Why this all?</button></a>
+            
+            <p id="errorMessage" style="color: red; display: none;">Sorry, your name does not match.</p>
+        </div>
+    </div>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="../images/logo-ravi.png" alt="" class="logoo">
+                </div>
+                
+            </div>
+            <div class="header-actions">
+                
+                <button class="btnn" onclick="location.href='../home.html'">Go to Home</button>
+                <button class="btnn" onclick="showPrivacyModal()">Privacy</button>
+            </div>
+        </div>
+    </header>
+    <div class="cctv-container">
+        <div id="popup" class="popup hidden">Button Enabled</div>
+        <button class="btn cctv-btn on" id="cctvBtn">
+            
+            <svg class="cctv-icon" width="100"
+            height="100"
+            viewBox="0 0 64 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Camera Body -->
+<rect x="8" y="16" width="48" height="16" rx="2" ry="2" fill="black" stroke="gray" stroke-width="2"/>
+
+<!-- Lens -->
+<circle cx="44" cy="24" r="5" fill="gray" stroke="white" stroke-width="1"/>
+
+<!-- Bracket -->
+<rect x="12" y="32" width="8" height="12" fill="gray"/>
+
+<!-- Arm -->
+<line x1="16" y1="44" x2="32" y2="56" stroke="gray" stroke-width="3"/>
+
+<!-- Base -->
+<rect x="30" y="54" width="6" height="6" fill="gray"/>
+
+<!-- Light Reflection -->
+<circle cx="46" cy="22" r="1" fill="white"/>
+            </svg>
+            <div class="power-indicator"></div>
+        </button>
+        <img class="help-icon" id="cctvHelp" src="https://icons.veryicon.com/png/o/miscellaneous/template-3/help-127.png">
+           
+        
+        <div class="tooltip" id="cctvTooltip">
+            Warning: CCTV will be active while reading the diaries. Disable it if you prefer not to be recorded.
+        </div>
+    </div>
+    <h1 class="title">NOTEBOOK</h1>
+    <main>
+        
+        <div class="notebooks">
+            <div class="notebook">
+                <h2 class="bookname">Daily Diary</h2>
+                <img src="../images/note1.png" class="bookimg">
+                <button class="btn" onclick="openDailyDiary()">Open Cover Page</button>
+            </div>
+            <div class="notebook">
+                <h2 class="bookname">Life Notes</h2>
+                <img src="../images/note2.png" class="bookimg">
+
+                <button class="btn" onclick="openLifeNotes()">Open Cover Page</button>
+            </div>
+            <div class="notebook">
+                <h2 class="bookname">Sacrosanct I</h2>
+                <img src="../images/note3.png" class="bookimg">
+
+                <button class="btn" onclick="openSacrosanctI()">Open Cover Page</button>
+            </div>
+            <div class="notebook">
+                <h2 class="bookname">Sacrosanct II</h2>
+                <img src="../images/note4.png" class="bookimg">
+
+                <button class="btn" onclick="openSacrosanctII()">Open Cover Page</button>
+            </div>
+        </div>
+
+        <div class="actions">
+            
+            <button class="btnl" onclick="showInterestModal()">Show Interest</button><br>
+            <button class="btnl" onclick="location.href='gudiya.html'">Chat to Gudiya</button><br>
+            <button class="btnl" onclick="toggleDescription()">What's it all?</button><br>
+        </div>
+
+        <p id="description" style="display: none; text-align: center; margin-top: 1rem; color: white; text-align: justify; border: 1px solid white; padding: 10px; border-radius: 5px;">
+            This is his notebook, where you can read his life diaries if you're interested. However, to access these books, you must first confirm that you know Ravi. 
+            To verify that you belong to his circle, you need to follow certain steps. <br><br>
+            Additionally, if you keep the CCTV toggle enabled, your activity will be recorded and tracked.        </p>
+    </main>
+
+    <!-- Modals -->
+    <div id="dailyDiaryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="hideModal('dailyDiaryModal')">&times;</button>
+
+                <h2>Access his Daily Diary</h2>
+            </div>
+            <div class="modal-body">
+                <p>Answering the following questions will grant access to the diary, as it is only for those close to Ravi.</p>
+                <div id="dailyDiaryForm">
+                    <div class="form-group">
+                        <p>Do you know Ravi?</p>
+                        <button class="btn" onclick="handleKnowRavi(true)">Yes</button>
+                        <button class="btn" onclick="handleKnowRavi(false)">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lifeNotesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="hideModal('lifeNotesModal')">&times;</button>
+
+                <h2>Life Notes</h2>
+            </div>
+            <div class="modal-body">
+                <p>Answering the following questions will grant access to the diary, as it's meant only for those truly exploring Ravi.</p>
+                <div id="lifeQuestions" class="questions"></div>
+                <div class="form-group">
+                    <input type="text" id="lifeAnswer" placeholder="Enter your answer">
+                    <button class="btn" onclick="verifyLifeAnswer()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sacrosanctIModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="hideModal('sacrosanctIModal')">&times;</button>
+
+                <h2>Sacrosanct I</h2>
+            </div>
+            <div class="modal-body">
+                <p>This book is locked. To access it, you must solve one of the questions below.</p>
+                <div id="mathQuestions" class="questions"></div>
+                <div class="form-group">
+                    <input type="text" id="mathAnswer" placeholder="Enter your answer">
+                    <button class="btn" onclick="verifyMathAnswer()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sacrosanctIIModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="hideModal('sacrosanctIIModal')">&times;</button>
+
+                <h2>Sacrosanct II </h2><h4> (locked)</h4>
+            </div>
+            <div class="modal-body">
+                <p>This book is locked. If you've requested the password from Ravi and have received it, you may enter it below.</p>
+                <div class="form-group">
+                    <input type="password" id="sacrosanctPassword" placeholder="Enter password">
+                    <button class="btn" onclick="verifySacrosanctPassword()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy System</h2>
+            </div>
+            <div class="modal-body">
+                <p style="">We care about your privacy. Since you haven't shared any information with us, rest assured that the CCTV system below only tracks your behavior after you enter a book. Since it's not active, there's no need to worry about your privacy.
+
+                   <br><br> Ravi also values his privacy. Just because he's sharing his experiences here doesn't mean he's revealing sensitive or private information. He's only sharing what’s safe to know—his life experiences, notes, and diaries. He’s set up an authentication system because he wants only his close ones to access his personal life details. If you need more information, feel free to reach out to his Gudiya or contact him directly through the 'Contact Him' section.</p>
+                <button class="btn" onclick="closePrivacyModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="interestModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>HMM... Access Book Without Authentication, Right?</h2>
+                <button class="close-btn" onclick="hideModal('interestModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Please confirm your real identity:</p>
+                <div class="form-group">
+                    <input type="text" id="interestName" placeholder="Enter your full name">
+                    <button class="btn" onclick="submitInterest()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/notebook.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200..800&family=Gochi+Hand&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IN:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gochi+Hand&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IN:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+</body>
+</html>

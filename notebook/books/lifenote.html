@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Notes Book</title>
+    <link rel="stylesheet" href="../css/lifenote.css">
+    <!-- Font Awesome for search icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script defer src="../js/lifenote.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Life Notes Book</h1>
+            <h2>Changing Timeline of Ravi</h2>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search here...">
+                <!-- Font Awesome search icon -->
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <div class="search-panel hidden" id="search-panel">
+                 
+                </div>
+            </div>
+        </header>
+        
+      
+
+        <!-- More content below -->
+        <div class="messages">
+            <div class="message">
+                <span>Every page is packed with his memories..</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="message">
+                <span>It's just about creating experiences. Not interested? Then leave.</span>
+                <button class="close-btn">X</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="content-item" onclick="redirectToPage()">
+                <img src="https://media.istockphoto.com/id/1453838542/photo/last-light-on-mount-sneffels.jpg?s=612x612&w=0&k=20&c=IBOZYpAjhV5hFEL8yKYmY2ZCyCaGEOrXR5VZI13NMRI=" alt="Memory">
+                <p>It was nice to being happy...</p>
+            </div>
+            <div class="content-item" onclick="redirectToPage()">
+                <img src="https://worldwildschooling.com/wp-content/uploads/2024/05/Mountains-in-the-US_Grand-Teton-Wyoming_Kennytong_Adobe-Stock-Photo_67602283-1024x576.webp" alt="Memory">
+                <p>It was nice to being happy...</p>
+            </div>
+            <div class="content-item" onclick="redirectToPage()">
+                <img src="road.jpg" alt="Memory">
+                <p>It was nice to being happy...</p>
+            </div>
+            <div class="content-item" onclick="redirectToPage()">
+                <img src="road.jpg" alt="Memory">
+                <p>It was nice to being happy...</p>
+            </div>
+        </div>
+        
+        <button id="privacy-btn" class="top-right-btn">Privacy</button>
+       <a href="../../home.html"> <button id="go-back" class="top-right-btn">Go Back</button></a>
+        
+        
+    </div>
+</body>
+</html>

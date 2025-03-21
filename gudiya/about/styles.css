@@ -1,0 +1,158 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.heading {
+    display: flex;
+    padding: 20px;
+    justify-content: left;
+    background-color: silver;
+    background-color: rgb(255, 0, 0);
+}
+.top-btn {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(255, 0, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.top-btn:hover {
+    background-color: rgb(226, 226, 226);
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+.image-area {
+    
+
+}
+.image-area .gudiya-logo {
+    width: 450px;
+    margin-top: 40px;
+    margin-left: 60px;
+    transition: 0.3s;
+
+}
+.image-area .gudiya-logo:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+.main-body {
+    display: flex;
+    gap: 120px;
+}
+.text-area {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+   
+   
+}
+ h1 {
+    font-family: Anton;
+    font-weight: 40px;
+    font-size: 50px;
+    letter-spacing: 8px;
+    text-align: center;
+}
+p {
+    font-family: Manrope ;
+    text-align: justify;
+    background-color: rgb(236, 236, 236);
+    width: 600px;
+padding: 20px;
+border-radius: 7px;
+}
+.q-collection1 {
+    background-color: rgb(255, 0, 0);
+    margin-top: 10px;
+    margin: 20px;
+    padding: 14px;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    font-family: arial;
+}
+.q-collection2 {
+    background-color: rgb(219, 219, 219);
+    margin-top: 10px;
+    margin: 20px;
+    padding: 14px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    border-radius: 0px;
+    font-family: arial;
+}
+@media (max-width: 480px) {
+    body {
+      flex-direction: column;
+      height: auto;
+      
+      
+    }
+    .heading {
+        display: flex;
+        padding: 20px;
+        justify-content: left;
+        background-color: silver;
+        background-color: rgb(255, 0, 0);
+    }
+    .text-area {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+       
+       
+    }
+    .main-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-area .gudiya-logo {
+        width: 300px;
+        margin-top: 40px;
+        margin-left: 60px;
+        transition: 0.3s;
+    
+    }
+    p {
+        font-family: Manrope ;
+        text-align: justify;
+        background-color: rgb(236, 236, 236);
+        width: 300px;
+    padding: 20px;
+    border-radius: 7px;
+    }
+    h1 {
+        font-family: Anton;
+        font-weight: 40px;
+        font-size: 40px;
+        letter-spacing: 8px;
+        text-align: center;
+    }
+    .q-collection1 {
+        background-color: rgb(255, 0, 0);
+       
+        
+        padding: 14px;
+        color: white;
+        font-size: 24px;
+        border-radius: 10px;
+        font-family: arial;
+    }
+    .q-collection2 {
+        background-color: rgb(219, 219, 219);
+        
+       
+        padding: 14px;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        border-radius: 0px;
+        font-family: arial;
+    }
+}

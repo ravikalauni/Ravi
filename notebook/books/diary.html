@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Diary Book</title>
+    <link rel="stylesheet" href="../css/diary.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h1>DAILY DIARY BOOK</h1>
+                    <div class="nav-subtitle">
+                        <h2>CHANGING TIMELINE OF RAVI</h2>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn-dark" id="privacyBtn">PRIVACY</button>
+                    <a href="../../home.html"><button class="btn btn-dark">GO BACK</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="timeline-container">
+        <div class="timeline" id="timeline">
+            <!-- Timeline entries will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Privacy Panel -->
+    <div class="panel privacy-panel" id="privacyPanel">
+        <button class="close-btn">&times;</button>
+        <div class="panel-content">
+            <h3>Privacy Settings</h3>
+            <div class="settings-list">
+                <div class="setting-item">
+                    <input type="checkbox" id="toggle" class="toggle">
+                    Auto Lock After Inactivity <label for="toggle" class="toggle-label"></label> 
+                </div>
+                <div class="setting-item2">
+                    <h4>At Daily Diary, your privacy is our priority. Here's how we handle your data:</h4><br>
+                    <li>No Tracking Unless You Share It</li><p> We don’t track or store your visits unless you choose to share information with us.</p><br>
+                    <li>Your Data Stays Private</li><p>  If you’ve shared any data, rest assured we do not share it with others. Your information is fully secure.</p><br>
+                    <li>No Visit Logs</li><p> We don’t record who visits the website, so your browsing remains completely private.</p><br>
+                    <li>Ravi’s Privacy Rules </li><p> Just like you, Ravi values his privacy. He hasn’t shared any personal or sensitive details here—only the information he’s comfortable showing to the public, interested readers, or close ones.</p><br>
+                   <a href="../../error-page.hmtl"><button class="helpbtn">Gudiya's Answer Collection</button></a>
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Context Panel -->
+    <div class="panel context-panel" id="contextPanel">
+        <button class="close-btn">&times;</button><br><br>
+        <div class="panel-content">
+            <h3 id="contextTitle"></h3>
+            <div class="context-content" id="contextContent">
+                <div class="prose prose-invert"><br>
+                   <p>He hasn’t left any Contex here for this note!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Dialog -->
+    <div class="dialog share-dialog" id="shareDialog">
+        <div class="dialog-content">
+            <h3>Share Entry</h3>
+            <div class="share-options">
+                <button class="btn btn-outline" id="copyLinkBtn">
+                    <span class="icon">📋</span>
+                    Copy Link
+                </button>
+                <button class="btn btn-outline" id="whatsappShareBtn">
+                    <span class="icon">📱</span>
+                    WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for panels and dialogs -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="../js/diary.js"></script>
+</body>
+</html>
