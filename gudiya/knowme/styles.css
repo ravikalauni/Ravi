@@ -57,6 +57,10 @@ ul {
     padding: 10px;
     margin-top: 90px;
     align-items: center;
+    
+}
+form {
+    width: 100%;
 }
 input {
     flex-grow: 1;
@@ -67,13 +71,31 @@ input {
     font-size: 16px;
     outline: none;
     font-family: Consolas;
+    width: 80%;
 }
+
 button {
     background: none;
     border: none;
     color: white;
     font-size: 20px;
     cursor: pointer;
+    
+    
+}
+.bugs {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 15px;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.bugs p {
+    background-color: #4d4d4d;
+    padding: 10px;
+    border-radius: 10px;
 }
 .note {
     margin-top: 10px;
