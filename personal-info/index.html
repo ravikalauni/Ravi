@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="overlay" id="termsOverlay">
+        <div class="form-container">
+            <p>You must agree to the Terms and Conditions to access this page.</p>
+            <label class="checkbox-container">
+                
+                <input type="checkbox" id="agreeCheckbox" name="Terms & Conditions accepters">
+                I agree to the <a href="terms&conditions.html">Terms and Conditions</a>
+           
+            </label>
+            <br><br>
+            <button onclick="checkAgreement()" class="enter-btn">Enter</button>
+        </div>
+    </div>
+
+    <header>
+
+        <form name="submit-to-google-sheet">
+        <p>Are you just stalking or came here for a purpose? <input class="openion-input" type="text" placeholder="What's your purpose?" name="Purpose of visiting" required> <button class="openion-input-submit" type="submit">Submit</button></p>
+    </form>
+    <a href="../index.html"><button class="header-btn">Go to home</button></a>
+    <a href="../index.html"><button class="header-btn">Privacy Policy & Terms</button></a>
+    
+    </header>
+
+    <main>
+        <!-- Left Section -->
+        <div class="column left">
+            <div class="profile-pic">
+                <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-512.png" alt="Profile">
+            </div>
+            <div class="confidential-info">
+                <h3>Access Confidential Info</h3>
+                <p>Information under Blue Ribbon Classification is sensitive and confidential and cannot be shared publicly. To request access, you must submit a Confidential Access Request Form with a valid justification. Access is granted only after verification and approval, ensuring compliance with security policies. Unauthorized access or disclosure may result in disciplinary or legal action.</p>
+                <form name="submit-to-google-sheet">
+                    <input type="text" placeholder="Your legal name" class="forms" name="Legal Name" id="name" required>
+                    <input type="text" placeholder="Nationality" class="forms" name="Nationality" id="nationality" required>
+                    <input type="email" placeholder="Email" class="forms" name="Email" id="nationality" required>
+                    <textarea placeholder="Describe why you need access" class="forms" name="Description" id="nationality" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="column middle">
+            <div class="info-box">
+                <h3>Basic Identifiable Information</h3>
+                <li><strong>Full Name :</strong> Ravi Prasad Kalauni</li>
+                <li><strong>Date of Birth :</strong> 24 January</li>
+                <li><strong>Gender :</strong> Male</li>
+                <li><strong>Nationality :</strong> 24 January</li>
+                <li><strong>Marital Status :</strong> Unmaried</li>
+                
+            </div>
+
+            <div class="info-box">
+                <h3>Contact Details</h3>
+                <li><strong>Address (Permanent/Current):</strong> <span class="ribbon"></span></li>
+                <li><strong>Phone:</strong> <span class="ribbon"></span></li>
+                <li><strong>Email:</strong> <span class="ribbon"></span></li>
+                <li><strong>Social Media Profiles:</strong> Instagram, Facebook, LinkedIn, More</li>
+                <li><strong>Emergency Contact Information : </strong> WhatsApp</li>
+            </div>
+
+            <div class="info-box">
+                <h3>Government & Legal Information (Confidential)</h3>
+                <li><strong>Citizenship ID:</strong> <span class="ribbon"></span></li>
+                <li><strong>Passport Number:</strong> <span class="ribbon"></span></li>
+                <li><strong>Tax Identification Number: </strong> <span class="ribbon"></span></li>
+                <li><strong>Voter ID: </strong> <span class="ribbon"></span></li>
+                <li><strong>Birth Certificate Details: </strong> <span class="ribbon"></span></li>
+            </div>
+            
+            
+
+            <div class="info-box">
+                <h3>Educational Information</h3>
+                <li><strong>Schooling (Class 1-6): </strong> Shree Samaiji Adharbhut Vidyalaya, Dadeldhura</li>
+                <li><strong>Schooling (Class 7-10): </strong> Jaycees Secondary School, Rajipur, Kanchanpur</li>
+                <li><strong>Bachelor (BCA Running): </strong> Brixton College, Mahendranagar, Kanchanpur</li>
+            </div>
+            <div class="info-box">
+                <h3>Family Information</h3>
+                <li><strong>Parents’ Names: </strong> <span class="ribbon"></span></li>
+                <li><strong>Siblings' Details: </strong> <span class="ribbon"></span></li>
+                <li><strong>Spouse’s Name: </strong>  <span class="ribbon">No Spouse</span></li>
+                <li><strong>Children’s Information: </strong> <span class="ribbon">No children</span></li>
+            </div>
+            <div class="info-box">
+                <h3>Online & Digital Presence</h3>
+                <li><strong>Website/Portfolio Links: </strong> <a href="https://ravikalauni.github.io/Ravi/?fbclid=IwY2xjawJMqG1leHRuA2FlbQIxMAABHajdBlUYO07lwg6RjMrpzc6kyKSMnm-yEPYyV4-OPuc5xnGlitpSmzrc4A_aem_AhsFG9cNaK_Z1ndFNVjLrQ">Website</a></li>
+                <li><strong>IP Address </strong> <span class="ribbon"></span></li>
+                <li><strong>Digital Footprint </strong>  <span class="ribbon"></span></li>
+                
+            </div>
+            <div class="info-box">
+                <h3>Sensitive Information (Privacy-Related)</h3>
+                <li><strong>Political Views: </strong> <span class="ribbon"></span></li>
+                <li><strong>Religious Beliefs:  </strong> <span class="ribbon"></span></li>
+                <li><strong>Sexual Orientation: </strong>  <span class="ribbon"></span></li>
+                <li><strong>Criminal Record: </strong> <span class="ribbon">No</span></li>
+                <li><strong>Biometric Data: </strong> <span class="ribbon"></span></li>
+            </div>
+            
+
+            
+        </div>
+
+        <!-- Right Section -->
+        <div class="column right">
+            <h2>Let me talk about myself</h2>
+            <div class="language-selector">
+                <p>Gudiya Auto Translator: </p>
+                <img src="https://www.shutterstock.com/image-vector/usa-america-set-circular-circle-600nw-2479083185.jpg" alt="English" onclick="changeLanguage('en')">
+                <img src="https://cdn-icons-png.flaticon.com/512/197/197387.png" alt="Nepali" onclick="changeLanguage('np')">
+                <select id="language-dropdown" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="np">Nepali</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ar">Arabic</option>
+                    <option value="ru">Russian</option>
+                </select>
+            </div>
+            <p id="about-text">
+                Hey there! I’m Ravi Prasad Kalauni, and I’m from the beautiful country of Nepal. My story begins on January 24th in the Baitadi District, where I was born to the Kalauni family. Growing up in a place like Baitadi, surrounded by the mountains and the serenity of the landscape, I had a pretty simple, peaceful childhood. My parents were a constant source of inspiration and taught me the value of hard work, humility, and curiosity. Little did I know, my life was about to take some unexpected turns, and I would soon be on a journey that would shape who I am today.
+                <br><br>
+                Before I could really grasp the concept of “home,” my family decided to make a big move. I was only three years old when, in 2010, we packed our things and relocated to Alital, a small town in Dadeldhura District. The change was huge. I barely had memories of Baitadi, and now I was starting life anew in an unfamiliar place. But looking back, I can say it was one of the best things that happened to me. I grew up in a small, tight-knit village environment, where everyone knew everyone, and life moved at a slower, more deliberate pace.
+                <br><br>
+                During my early years in Dadeldhura, I started my education at Shree Samaiji Adharbhut Vidyalaya in Kurjeni. That school was where I first discovered my love for learning. I didn’t know it at the time, but those years would shape a lot of what I wanted to do later in life. Back then, the small school had a sense of community that made learning feel less like a task and more like an exciting adventure. I remember the teachers being more than just instructors—they were mentors, guiding us through subjects with patience and care.
+                <br><br>
+                As I grew older, my family had to make another move. In 2019, we decided to relocate once again, this time to Mahendranagar, a bustling city in the Terai region of Kanchanpur. The transition was bittersweet. It was tough leaving the familiarity of the village life in Dadeldhura, but I was also excited about the possibilities that came with moving to a more developed area. Mahendranagar was a lot more modern compared to the quiet village we had left behind, but it felt like a place full of new opportunities.
+                <br><br>
+                When I first arrived in Mahendranagar, I joined Jaycees Seonary School in Rajipur, starting in 7th grade. At first, I felt a bit out of place. The city was bigger, the people were more diverse, and there was a lot more going on. But I quickly realized that the new environment had a lot to offer. The friendships I made at Jaycees Seonary School became some of the most valuable in my life. The new faces, the different perspectives, and the sense of growth around me motivated me to push harder and pursue more. I was getting a taste of what it meant to grow beyond what I knew, and I liked it.
+                <br><br>
+                As time passed, I completed my SEE (Secondary Education Examination) in 2022. That was a defining moment for me. It felt like I had crossed a major milestone, and I was ready to tackle whatever came next. After finishing my SEE, I decided to continue my education at Morning Glory Secondary School. The switch to commerce in Class 11 was a pretty big shift from what I had been studying before, but it felt like the right path for me. I had always been fascinated by the way businesses work, how the economy functions, and how technology was starting to play a bigger role in everything around me. So, commerce seemed like the perfect fit for my interests at the time.
+                <br><br>
+                Completing my +2 in 2024 was another turning point. By this point, I had realized that my passion for technology and coding was something I couldn’t ignore any longer. I had spent countless hours tinkering with computers, learning basic coding languages, and figuring out how things worked behind the scenes. It wasn’t just a hobby—it was a calling. That’s when I decided to take the plunge and join Brixton College as a BCA (Bachelor in Computer Applications) student.
+                <br><br>
+                The decision to pursue a BCA was driven by my desire to understand the world of technology on a deeper level. Computers and coding weren’t just tools for me; they were gateways to new possibilities. It was like I had unlocked a whole new world, and I wanted to explore every corner of it. From software development to problem-solving, I could see how technology was transforming industries, and I wanted to be a part of that revolution.
+                <br><br>
+                But enough about school for a moment—let me tell you a little more about myself, outside of the books and the classroom. I’m someone who’s always been curious, always been interested in exploring different facets of life. I’m not trying to flex or anything, but I’ve always enjoyed trying out new things, whether it’s learning a new skill or picking up a new hobby. It’s about broadening my horizons and embracing whatever comes my way.
+                <br><br>
+                One of my favorite things to do is draw sketches. It’s a passion that has been with me since childhood. There’s something so calming and fulfilling about sketching. When I’m holding a pencil and letting my hand flow across the paper, I can lose myself for hours. It’s like a creative escape for me. Whether it’s landscapes, portraits, or random ideas, sketching helps me express myself in ways words sometimes can’t.
+                <br><br>
+                But let’s not forget about coding, the one thing that truly excites me. Coding is a whole different story for me. It started as something small, like a curiosity I had when I first saw a program running on my computer. Fast forward to today, and I’m completely hooked. It’s not just about writing lines of code; it’s about solving problems, building something from nothing, and constantly learning. Coding allows me to be creative in a technical way, and I find immense satisfaction in bringing ideas to life through software. It’s an ever-evolving field, and the more I learn, the more I realize how much there is to discover.
+                <br><br>
+                As for my personality, well, I like to think of myself as a bit of a chameleon. Some days, you’ll meet me and I’ll be the friendly guy, making jokes, having conversations, and connecting with people. Other times, I might seem a bit distant, keeping to myself or focusing on my work. And then, there are times when I’ll just disappear for a while, taking some time to recharge and reflect. But honestly, that’s just how I like to live—embracing the different parts of who I am. It’s all about balance. I’m not afraid to show different sides of myself, depending on the situation. I think that’s what keeps life interesting.
+                <br><br>
+                Looking back at everything, I can say that my journey has been full of change and growth. Every place I’ve lived, every school I’ve attended, and every new challenge I’ve faced has played a role in shaping me into the person I am today. And as I move forward with my BCA studies and beyond, I’m excited to see what the future holds. I’ve only just begun, and there’s still so much more to learn, explore, and create.
+
+            </p>
+        </div>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

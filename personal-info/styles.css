@@ -1,0 +1,242 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #ffffff;
+    color: rgb(0, 25, 134);
+    text-align: left;
+    padding: 15px;
+  
+}
+.intro {
+    font-size: 20px;
+    
+    font-family: impact;
+}
+.openion-input {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 6px;
+    outline: none;
+    border-radius: 5px;
+}
+.openion-input-submit {
+    border: none;
+    background-color: #007bff;
+    padding: 6px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-selector img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.language-selector select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    height: 85vh;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.left {
+    background-color: #e0f2ff;
+    
+    font-size: 12px;
+}
+
+.profile-pic img {
+    width: 180px;
+    margin-top: 10px;
+    margin: 20px;
+}
+
+.confidential-info {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+
+.confidential-info form input,
+.confidential-info form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.confidential-info button {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+.info-box {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 10px;
+}
+.info-box h3 {
+    color: red;
+}
+li {
+    color:rgb(0, 132, 255)
+}
+
+.middle {
+    background-color: white;
+    
+}
+
+.right {
+    background: #f8f9fa;
+    
+    font-family: arial;
+}
+#about-text {
+    text-align: justify;
+    font-size: 9px;
+}
+.ribbon {
+    background: rgb(0, 132, 255);
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 8px;
+    border-radius:2px;
+    width: 50px;
+    height: 10px;
+    cursor: pointer;
+}
+.header-btn {
+    border: none;
+    background-color: #007bff;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media (max-width: 480px) {
+    body {
+      flex-direction: column;
+      
+      
+      
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-pic img {
+        width: 180px;
+        margin-top: 10px;
+        margin: 20px;
+        display: none;
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.checkbox-container input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-container input:checked {
+    background-color: #007BFF;
+}
+.checkbox-container input:checked::after {
+    content: '\2713';
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.enter-btn {
+    padding: 4px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid rgb(214, 214, 214);
+
+}
