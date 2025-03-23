@@ -253,3 +253,26 @@ function toggleMenu() {
 window.onload = () => {
     document.getElementById("nameInput").focus();
 };
+
+
+// for names inputing in database
+const scriptURL = 'https://script.google.com/macros/s/AKfycbywyiBE3IXgV8CtDy1gKhS8aaM7pwNyW4owMyDm5ANZQnR3lco3WWEL1yEQulKC7bFW/exec'; 
+const form = document.forms['submit-to-google-sheet'];
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();  // Prevents the form from submitting the traditional way
+
+    const formData = new FormData(form);  // Collect form data
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())  // Handle the response (success or error)
+    .then(data => {
+        console.log('Form submitted successfully', data);  // Log success (optional)
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);  // Log error if any
+    });
+});
