@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Kalauni - Graphics Design Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <h1 class="logo">Ravi Kalauni</h1>
+            <p class="tagline">Graphics Design Portfolio</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-container">
+        <!-- Alert Banner -->
+        <div class="alert-banner" id="alert-banner">
+            <p>This page is Under Maintenance</p>
+            <p>Note: All the designs here are designed for the demonstration purpose only</p>
+            <button class="close-btn" id="close-alert" style="color: white; font-size: 25px;">X</button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="../../index.html" class="btn primary-btn">Go to Home Page</a>
+            <a href="#" class="btn secondary-btn">Access the Drive instead</a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search my designs here...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-results" id="search-results">
+                <!-- Search results will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Design Categories Grid -->
+        <div class="categories-grid" id="categories-grid">
+            <!-- Categories will be dynamically populated here -->
+        </div>
+
+        <!-- Gallery Overlay -->
+        <div class="gallery-overlay" id="gallery-overlay">
+            <div class="gallery-header">
+                <h2 id="gallery-title">Category Title</h2>
+                <button class="close-btn gallery-close-btn"></button>
+                <button class="close-btn" id="close-gallery" style="color: rgb(255, 255, 255); font-family: Arial; font-size: 20px; ">Close</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery images will be populated here -->
+                <div class="gallery-skeleton">
+                    <div class="skeleton-item">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-text long"></div>
+                        <div class="skeleton-shimmer"></div>
+                    </div>
+                    <div class="skeleton-item">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-text long"></div>
+                        <div class="skeleton-shimmer"></div>
+                    </div>
+                    <div class="skeleton-item">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-text long"></div>
+                        <div class="skeleton-shimmer"></div>
+                    </div>
+                    <div class="skeleton-item">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-text long"></div>
+                        <div class="skeleton-shimmer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Screen Image Preview -->
+        <div class="preview-overlay" id="preview-overlay">
+            <div class="preview-controls">
+                <button class="preview-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="close-btn" id="close-preview" style="color: rgb(255, 255, 255);font-weight: bold; font-size: 20px;">Close</button>
+                <button class="preview-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="preview-container" id="preview-container">
+                <div class="preview-image-container">
+                    <img id="preview-image" src="" alt="Preview">
+                </div>
+            </div>
+            <div class="zoom-controls">
+                <button class="zoom-btn" id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                <button class="zoom-btn" id="zoom-out"><i class="fas fa-search-minus"></i></button>
+                <button class="zoom-btn" id="zoom-reset"><i class="fas fa-sync"></i></button>
+            </div>
+            <div class="image-details">
+                <h3 id="image-title">Image Title</h3>
+                <p id="image-description">Image description goes here</p>
+            </div>
+        </div>
+
+        <!-- Skills Modal -->
+        <div class="modal-overlay" id="skills-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Skills</h2>
+                    <button class="close-btn" id="close-skills" style="color: rgb(0, 0, 0); font-size: 30px;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3>Design Expertise</h3>
+                    <ul class="skills-list">
+                        <li>Brand Identity Design</li>
+                        <li>Print & Editorial Design</li>
+                        <li>Digital Design & UI/UX</li>
+                        <li>Package Design</li>
+                        <li>Typography & Layout</li>
+                        <li>Photo Manipulation</li>
+                        <li>Illustration</li>
+                    </ul>
+
+                    <h3>Software Proficiency</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">Adobe Photoshop</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Adobe Illustrator</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Adobe InDesign</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Sketch</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Modal -->
+        <div class="modal-overlay" id="info-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Info</h2>
+                    <button class="close-btn" id="close-info"style="color: rgb(0, 0, 0); font-size: 30px;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3>About Me</h3>
+                    <p>I am a graphic designer with over 3 years of experience creating visual identities, marketing
+                        materials, and digital assets for brands across various industries. My approach combines
+                        strategic thinking with creative execution to deliver designs that not only look beautiful but
+                        also solve real business problems.</p>
+
+                        <br><br>
+                    
+                        <h3>Experience</h3>
+                        I have hands-on experience in graphic design, working on a wide range of projects including posters, social media graphics, logos, and branding materials. My focus has been on creating clear, visually consistent designs that meet specific goals and requirements. I am proficient in tools such as Adobe Photoshop, Illustrator, and Canva, and I have developed a solid understanding of layout design, typography, and color theory. I am capable of managing design tasks from concept to final output while meeting deadlines and maintaining quality standards.
+                   
+<br><br>
+                    <h3>Education</h3>
+                    <p>I am currently pursuing a Bachelor's in Computer Applications (BCA) at Brixton College, Mahendranagar. Alongside my academic studies, I have developed strong skills in graphic design through online courses and practical experience. I believe that in the field of design, real skills matter more than certificates. My focus has been on continuously learning and improving through hands-on work, rather than relying solely on formal qualifications. Graphic design has become one of the skills I genuinely enjoy developing as part of my overall growth in the tech field.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div class="modal-overlay" id="contact-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Contact</h2>
+                    <button class="close-btn" id="close-contact"style="color: rgb(0, 0, 0); font-size: 30px;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>unotat5@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+977-9767456643</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mahendranagar, Nepal</span>
+                        </div>
+                    </div>
+                    <p style="text-align: justify; background-color: rgb(53, 87, 75); color: white; padding: 10px; border-radius: 5px;">You can contact me by filling out the form below with your email. I usually respond within 24 hours.
+                        If you prefer a quicker response, feel free to reach out to me directly through the social media links provided below.
+                        
+                        </p>
+                        <br><br>
+
+                    <h3>Send a Message</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ravi_kalauni404/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ravi-kalauni-66044731b/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.behance.net/unotat" class="social-link"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Ravi Kalauni. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
