@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // State
     let categories = [
         "YouTube Thumbnails", "Facebook/Instagram Graphics", "Logo Design", "Business Cards",
-        "Letterheads & Stationery", "Packaging Design", "Brochures", "Posters & Banners",
-        "Email Templates", "Billboards", "Website Layouts", "Mobile App Interfaces",
+        "Packaging Design", "Brochures", "Movie Posters",
+        "id cards", "Billboards", "Website Layouts", "Mobile App Interfaces",
         "Book Covers", "Product Packaging", "Labels & Stickers", "Billboards & Hoardings",
         "Font Creation", "Hand-drawn Illustrations", "Digital Painting", "T-Shirt Designs",
         "Wedding Invitations", "Event Posters", "Sport Scoreposts", "ID Cards"
@@ -474,6 +474,20 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (category === "Logo Design") {
             mockImages = [
                 {
+                    id: 16, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/16.png", 
+                    fullsize: "logos/16.png"
+                },
+                {
+                    id: 17, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/17.png", 
+                    fullsize: "logos/17.png"
+                },
+                {
                     id: 1, 
                     title: "", 
                     description: "", 
@@ -481,11 +495,40 @@ document.addEventListener('DOMContentLoaded', function() {
                     fullsize: "logos/1.png"
                 },
                 {
-                    id: 2, 
+                    id: 13, 
                     title: "", 
                     description: "", 
-                    thumbnail: "logos/2.png", 
-                    fullsize: "logos/2.png"
+                    thumbnail: "logos/13.png", 
+                    fullsize: "logos/13.png"
+                },
+                {
+                    id: 19, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/19.png", 
+                    fullsize: "logos/19.png"
+                },
+               
+                {
+                    id: 14, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/14.png", 
+                    fullsize: "logos/14.png"
+                },
+                {
+                    id: 18, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/18.png", 
+                    fullsize: "logos/18.png"
+                },
+                {
+                    id: 15, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/15.png", 
+                    fullsize: "logos/15.png"
                 },
                 {
                     id: 3, 
@@ -508,13 +551,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     thumbnail: "logos/5.png", 
                     fullsize: "logos/5.png"
                 },
-                {
-                    id: 6, 
-                    title: "", 
-                    description: "", 
-                    thumbnail: "logos/6.jpg", 
-                    fullsize: "logos/6.jpg"
-                },
+                
                 {
                     id: 5, 
                     title: "", 
@@ -529,13 +566,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     thumbnail: "logos/6.png", 
                     fullsize: "logos/6.png"
                 },
-                {
-                    id: 7, 
-                    title: "", 
-                    description: "", 
-                    thumbnail: "logos/7.jpg", 
-                    fullsize: "logos/7.jpg"
-                },
+                
                 {
                     id: 7, 
                     title: "", 
@@ -565,6 +596,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     fullsize: "logos/9.png"
                 },
                 {
+                    id: 19, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/19.png", 
+                    fullsize: "logos/19.png"
+                },
+                {
                     id: 10, 
                     title: "", 
                     description: "", 
@@ -584,6 +622,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     description: "", 
                     thumbnail: "logos/12.png", 
                     fullsize: "logos/12.png"
+                },
+                {
+                    id: 2, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "logos/2.png", 
+                    fullsize: "logos/2.png"
                 },
                 
                 
@@ -626,20 +671,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             }
 
-        /* Letterheads */
+       
 
-            else if (category === "Letterheads & Stationery") {
-                mockImages = [
-                    {
-                        id: 1, 
-                        title: "", 
-                        description: "", 
-                        thumbnail: "Letterheads/1.jpg", 
-                        fullsize: "Letterheads/1.jpg"
-                    },
-                ]
-    
-                }
+            
 
            /* Packaging Design */
 
@@ -649,9 +683,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 1, 
                         title: "", 
                         description: "", 
-                        thumbnail: "Letterheads/1.jpg", 
-                        fullsize: "Letterheads/1.jpg"
+                        thumbnail: "packaging/1.jpg", 
+                        fullsize: "packaging/1.jpg"
                     },
+                    {
+                        id: 2, 
+                        title: "", 
+                        description: "", 
+                        thumbnail: "packaging/2.jpg", 
+                        fullsize: "packaging/2.jpg"
+                    }
                 ]
     
                 }
@@ -670,6 +711,103 @@ document.addEventListener('DOMContentLoaded', function() {
                 ]
     
                 }
+
+                else if (category === "Movie Posters") {
+                    mockImages = [
+                        {
+                            id: 1, 
+                            title: "", 
+                            description: "", 
+                            thumbnail: "posters/1.jpg", 
+                            fullsize: "posters/1.jpg"
+                        },
+                        {
+                            id: 2, 
+                            title: "", 
+                            description: "", 
+                            thumbnail: "posters/2.jpg", 
+                            fullsize: "posters/2.jpg"
+                        },
+                        {
+                            id: 3, 
+                            title: "", 
+                            description: "", 
+                            thumbnail: "posters/3.jpg", 
+                            fullsize: "posters/3.jpg"
+                        },
+                        {
+                            id: 4, 
+                            title: "", 
+                            description: "", 
+                            thumbnail: "posters/4.jpg", 
+                            fullsize: "posters/4.jpg"
+                        },
+                    ]
+        
+                    }
+
+                    else if (category === "id cards") {
+                        mockImages = [
+                            {
+                                id: 1, 
+                                title: "", 
+                                description: "", 
+                                thumbnail: "id cards/1.jpg", 
+                                fullsize: "id cards/1.jpg"
+                            },
+                            {
+                                id: 2, 
+                                title: "", 
+                                description: "", 
+                                thumbnail: "id cards/2.jpg", 
+                                fullsize: "id cards/2.jpg"
+                            },
+                            {
+                                id: 3, 
+                                title: "", 
+                                description: "", 
+                                thumbnail: "id cards/3.jpg", 
+                                fullsize: "id cards/3.jpg"
+                            },
+                            
+                        ]
+            
+                        }
+                        else if (category === "Billboards") {
+                            mockImages = [
+                                {
+                                    id: 1, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "Billboards/1.jpg", 
+                                    fullsize: "Billboards/1.jpg"
+                                },
+                                {
+                                    id: 2, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "Billboards/2.jpg", 
+                                    fullsize: "Billboards/2.jpg"
+                                },
+                                {
+                                    id: 3, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "Billboards/3.jpg", 
+                                    fullsize: "Billboards/3.jpg"
+                                },
+                                {
+                                    id: 4, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "Billboards/4.jpg", 
+                                    fullsize: "Billboards/4.jpg"
+                                },
+                                
+                            ]
+                
+                            }
+                    
             
             
 
