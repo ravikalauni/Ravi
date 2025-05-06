@@ -360,17 +360,7 @@ function closeModal(modal) {
 }
 
 
-const texts = [
-    "yo, what's up?😎",
-    "nice to meet u!🤨",
-    "do i know u?🤔",
-    "OH YAH, MAY BE!😘",
-    "i know u!😐",
-    "i mean Gudiya.🤣",
-    "she knows u😇",
-    "welcome to my world",
-    "welcome welcome!!!!"
-]; // List of different texts
+
 const speed = 30; // Typing speed (milliseconds)
 const eraseSpeed = 50; // Erasing speed
 const delayBeforeErase = 1000; // Delay before erasing starts
