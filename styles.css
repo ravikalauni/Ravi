@@ -55,7 +55,7 @@ body {
 }
 
 .ravi-photo {
-    width: 500px;
+    width: 460px;
 }
 
 /* Custom font */
@@ -744,7 +744,7 @@ main {
         align-items: center;
     }
     .ravi-photo {
-        width: 500px;
+        width: 460px;
     }
     
     .header-buttons {
@@ -1026,6 +1026,7 @@ main {
         background: url('your-image.jpg');
         background-size: cover;
         background-position: center;
+        
     }
     
     .intro-part::before {
@@ -1037,10 +1038,11 @@ main {
         height: 100%;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.9) 100%);
         pointer-events: none;
+        
     }
   
     .ravi-photo {
-        width: 300px;
+        width: 260px;
         display: flex;
         align-items: center;
     }
