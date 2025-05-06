@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        resultDiv.textContent = "Searching...";
+        resultDiv.textContent = "Thinking...";
         
         try {
             // First test with a simple GET request
