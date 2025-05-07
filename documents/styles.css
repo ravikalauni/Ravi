@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+    color: #222;
+  }
+  
+  .navbar {
+    background-color: #0a3d0a;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    
+  }
+  
+  .description {
+    background-color: #004d00;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .notice {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .stories-container {
+    padding: 30px 10%;
+  }
+  
+  .story {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  
+  .story-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: red;
+  }
+  
+  .story-date {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 10px;
+    color: #888;
+  }
+  
+  .story-content {
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-line;
+    margin-bottom: 15px;
+  }
+  
+  .toggle-content-btn {
+    background: none;
+    border: none;
+    color: #0a3d0a;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px 0;
+    margin-top: 5px;
+    text-decoration: underline;
+  }
+  
+  .toggle-content-btn:hover {
+    color: #004d00;
+  }
+  
+  .story-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .like-btn {
+    color: #888;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .like-btn.liked {
+    color: red;
+  }
+  
+  .like-btn:hover {
+    color: #ff6b6b;
+  }
+  
+  .content-preview {
+    margin-bottom: 5px;
+  }
+
+  /* Add these new styles at the end of the file */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 15px;
+    }
+    
+    .nav-links {
+      margin-top: 15px;
+    }
+    
+    .nav-links a {
+      margin: 0 10px;
+    }
+    
+    .stories-container {
+      padding: 20px 5%;
+    }
+    
+    .story {
+      padding: 20px;
+    }
+    
+    .story-title {
+      font-size: 20px;
+      padding-right: 60px; /* Make space for date */
+    }
+    
+    .story-date {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brand {
+      font-size: 20px;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      align-items: right;
+    }
+    
+    .nav-links a {
+      margin: 5px 20px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+        margin: 5px 20px;
+        color: #888;
+        transition: 0.3s;
+      }
+    
+    .story {
+      padding: 15px;
+    }
+    
+    .story-title {
+      font-size: 18px;
+    }
+    
+    .story-content {
+      font-size: 15px;
+    }
+  }
+  
+  /* Ensure the content doesn't overflow on small screens */
+  .story-content {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
