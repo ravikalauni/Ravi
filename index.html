@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <script>
+        fetch("https://ipinfo.io/json?token=8087fefcfa2f0f")
+          .then(response => response.json())
+          .then(data => {
+            const location = {
+              ip: data.ip,
+              city: data.city,
+              region: data.region,
+              country: data.country
+            };
+      
+            fetch("https://script.google.com/macros/s/AKfycbyiOLO491Me-kKwdVPI8ehWv5aOrhBl3pqEFTUkxVKsDrlK-07WdONk0FipHIcTZwCYHA/exec", {
+              method: "POST",
+              mode: "no-cors",
+              body: JSON.stringify(location)
+            });
+          });
+      </script>
 </head>
 <body>
     
