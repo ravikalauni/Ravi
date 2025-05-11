@@ -55,7 +55,7 @@ body {
 }
 
 .ravi-photo {
-    width: 460px;
+    width: 300px;
 }
 
 /* Custom font */
@@ -737,7 +737,33 @@ main {
     font-size: 18px;
     margin-bottom: 16px;
 }
-
+.header-right .header-icon .update-dot{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
+    position: relative;
+    top: -80px;
+    left: 40px
+    
+}
+.header-right .header-icon .new-dot{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    
+    font-size: 12px;
+    position: relative;
+    top: -76px;
+    left: 20px
+    
+}
 /* Responsive */
 @media (min-width: 768px) {
     .collections-header {
@@ -745,7 +771,9 @@ main {
         align-items: center;
     }
     .ravi-photo {
-        width: 460px;
+        width: 400px;
+        margin-left: 60px;
+
     }
     
     .header-buttons {
