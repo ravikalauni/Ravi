@@ -1,0 +1,290 @@
+/* Base Styles */
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #262626;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #dbdbdb;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.back-arrow {
+  font-size: 24px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #262626;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 20px 15px;
+  display: flex;
+  
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid #f0f0f0;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+  margin: 15px 0;
+  font-size: 14px;
+  text-decoration: none;
+}
+.stats a{
+    text-decoration: none;
+    color: black;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.quote {
+  font-style: italic;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.social-note {
+  font-size: 12px;
+  color: #8e8e8e;
+  margin-top: 10px;
+}
+
+/* Content Section */
+.content-section {
+  border-top: 1px solid #dbdbdb;
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #262626;
+  border-top: 1px solid #262626;
+  margin-top: -1px;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.no-posts-icon {
+  font-size: 40px;
+  color: #8e8e8e;
+  margin-bottom: 15px;
+}
+
+.no-posts p {
+  color: #262626;
+  font-weight: 600;
+  margin: 0;
+}
+
+.add-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+}
+
+/* Responsive Styles */
+@media (min-width: 450px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-info h1 {
+    font-size: 22px;
+  }
+  
+  .stats {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 600px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-section {
+    padding: 30px 20px;
+  }
+  
+  .header {
+    padding: 15px 20px;
+  }
+}
+/* Add these new styles to your existing CSS */
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  animation: zoomIn 0.3s ease forwards;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.modal-overlay.closing {
+  opacity: 0;
+}
+
+.modal-overlay.closing .modal-content {
+  animation: zoomOut 0.3s ease forwards;
+}
+
+/* Make profile picture clickable */
+.profile-pic {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.03);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ravi Kalauni's Profile</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <a href="../index.html"><span class="back-arrow"><i class="fas fa-arrow-left"></i></span></a>
+      <span class="username">ravi_kalauni404</span>
+    </div>
+
+    <div class="profile-section">
+      <img src="images/profile-pic.jpg" alt="Ravi Kalauni" class="profile-pic" id="profilePic" />
+      <div class="profile-info">
+        <h1>Ravi Kalauni</h1>
+        <div class="stats">
+          <a href="../insights/index.html"><div><strong>10+</strong><br>Insights</div></a>
+          <a href="../documents/index.html"><div><strong>30+</strong><br>Documents</div></a>
+          <div><strong>100+</strong><br>Visitors</div>
+        </div>
+        <p class="quote">"Blanking the canvas for now is fine,<br>Let it be for next time."</p>
+        <small class="social-note">Powered by Facebook and Instagram</small>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div class="tabs">
+        <div class="tab active"><i class="fas fa-table-cells"></i></div>
+        <div class="tab"><i class="fas fa-user-tag"></i></div>
+      </div>
+      
+      <div class="no-posts">
+        <div class="no-posts-icon"><i class="far fa-images"></i></div>
+        <p>No Posts Yet</p>
+      </div>
+    </div>
+
+    <div class="add-icon">
+      <i class="fas fa-plus"></i>
+    </div>
+  </div>
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <img src="images/profile-pic.jpg" alt="Ravi Kalauni" id="modalImage" />
+      <button class="close-modal" id="closeModal">&times;</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
