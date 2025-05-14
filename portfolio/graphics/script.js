@@ -670,6 +670,39 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
 
             }
+         else if (category === "Business Cards") {
+            mockImages = [
+                {
+                    id: 1, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "business card/1.jpg", 
+                    fullsize: "business card/1.jpg"
+                },
+                {
+                    id: 2, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "business card/2.jpg", 
+                    fullsize: "business card/2.jpg"
+                },
+                {
+                    id: 3, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "business card/3.jpg", 
+                    fullsize: "business card/3.jpg"
+                },
+                {
+                    id: 4, 
+                    title: "", 
+                    description: "", 
+                    thumbnail: "business card/4.jpg", 
+                    fullsize: "business card/4.jpg"
+                },
+            ]
+
+            }
 
        
 
@@ -802,6 +835,64 @@ document.addEventListener('DOMContentLoaded', function() {
                                     description: "", 
                                     thumbnail: "Billboards/4.jpg", 
                                     fullsize: "Billboards/4.jpg"
+                                },
+                                
+                            ]
+                
+                            }
+                     else if (category === "Website Layouts") {
+                            mockImages = [
+                                {
+                                    id: 1, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/1.jpg", 
+                                    fullsize: "website/1.jpg"
+                                },
+                                {
+                                    id: 2, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/2.jpg", 
+                                    fullsize: "website/2.jpg"
+                                },
+                                {
+                                    id: 3, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/3.jpg", 
+                                    fullsize: "website/3.jpg"
+                                },
+                                {
+                                    id: 4, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/4.jpg", 
+                                    fullsize: "website/4.jpg"
+                                },
+
+                                {
+                                    id: 5, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/5.jpg", 
+                                    fullsize: "website/5.jpg"
+                                },
+
+                                {
+                                    id: 4, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/6.jpg", 
+                                    fullsize: "website/6.jpg"
+                                },
+
+                                {
+                                    id: 4, 
+                                    title: "", 
+                                    description: "", 
+                                    thumbnail: "website/7.jpg", 
+                                    fullsize: "website/7.jpg"
                                 },
                                 
                             ]
