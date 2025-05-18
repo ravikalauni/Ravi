@@ -1,278 +1,126 @@
-<?php
-// No processing needed at this point, just display the HTML
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravi's world</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ravi's Personal Space</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    
-      
-      
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
-    <div id="root">
-        <!-- Header Section -->
-        <!-- Header Section with Gradient Background -->
-        <div class="intro-part">
-<header class="header">
-    <div class="header-bg"></div>
-    <div class="header-content">
-        <div class="header-left">
-            <button id="menuButton" class="menu-button">
-                <i class="fa-solid fa-circle-chevron-right"></i>
-            </button>
-            <h1 class="site-title">ff</h1>
-        </div>
-        <div class="header-right">
-            <div class="header-icons">
-                <a href="insights/index.html" class="header-icon">
-                    <button  class="top-btn"><i class="fas fa-book-open" style="color: rgb(0, 0, 0); "><p style="font-size: 12px; margin-top: 6px; font-family:Arial, Helvetica, sans-serif;">Activities</p></i></button>
-                    <p class="update-dot">2</p>
-                   
-                </a>
-                <a href="gudiya/knowme/index.html" class="header-icon">
-                    <button id="notificationButton" class="top-btn"><i class="fas fa-robot" style="color: rgb(0, 0, 0); "><p style="font-size: 12px; margin-top: 6px; font-family:Arial, Helvetica, sans-serif;">Gudiya</p></i></button>
-                   <p class="new-dot">New</p>
-                </a>
-                <a href="message/index.html" class="header-icon">
-                    <button id="messageButton" class="top-btn"><i class="fas fa-envelope"><p style="font-size: 12px; margin-top: 6px; font-family:Arial, Helvetica, sans-serif;">Message</p></i></button>
-                    
-                </a>
-                <a href="profile/index.html" class="header-icon">
-                    <button id="profileButton" class="top-btn"><i class="fas fa-user-circle"><p style="font-size: 12px; margin-top: 6px; font-family:Arial, Helvetica, sans-serif;">Profile</p></i></button>
-                </a>
-            </div>
-            
+<body class="loading">
+    <!-- Top Header Bar -->
+    <div class="top-header">
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-icons">
+            <a href="insights/index.html"><i class="fas fa-chart-line"></i></a>
+            <a href="gudiya/knowme/index.html"><i class="fas fa-robot"></i></a>
+            <a href="message/index.html"><i class="fas fa-envelope"></i></a>
+            <a href="profile/index.html"><i class="fas fa-user"></i></a>
+
         </div>
     </div>
-</header>
 
-        <!-- Side Navigation -->
-        <div id="sideNav" class="side-nav">
-            <div class="side-nav-header">
-                <button id="closeNavButton" class="close-nav-button">
-                    <i class="fas fa-times"></i>
-                </button>
-                <h2 class="side-nav-title">MENU</h2>
-            </div>
-            <nav class="side-nav-links">
-                <a href="#" class="side-nav-link active">Home</a>
-                
-                <a href="gudiya/knowme/index.html" class="side-nav-link">Gudiya (Assistant)</a>
-                <a href="error.html" class="side-nav-link">Personal info</a>
-                
-                <a href="portfolio/graphics/index.html" class="side-nav-link">Portfolio</a>
-                <a href="error.html" class="side-nav-link">Curriculum Vitae (CV)</a>
-                <a href="art-gallery/index.html" class="side-nav-link">Art Library</a>
-                
-                <a href="error.html" class="side-nav-link">Q & A</a>
-                <a href="error.html" class="side-nav-link" style="color: rgb(229, 255, 0);">Life Notes (Not Accessable)</a>
-
-               
-
-            </nav>
-        </div>
-        
-        <div id="overlay" class="overlay">
-
-            
-        </div>
-        
-        <h1 id="typing-text" class="into-txt"></h1><span class="cursor"></span>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search Here..." class="search-input">
-            <button id="" class="search-button">
-                <i class="fas fa-search"></i>
+    <!-- Side Navigation -->
+    <div class="side-nav" id="sideNav">
+        <div class="nav-header">
+            <h3>Menu</h3>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
             </button>
         </div>
-            <img src="https://static.vecteezy.com/system/resources/previews/059/047/398/non_2x/a-stunning-closeup-of-a-european-robin-bird-against-a-black-background-free-png.png" alt="" class="ravi-photo">
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="documents/index.html"><i class="fas fa-book"></i> Blogs</a></li>
+            <li><a href="insights/index.html"><i class="fas fa-lightbulb"></i> Insights</a></li>
+            <li><a href="social/index.html"><i class="fas fa-share-alt"></i> Social Media</a></li>
+            <li><a href="gudiya/knowme/index.html"><i class="fas fa-robot"></i> Gudiya</a></li>
+            <li><a href="privacy/index.html"><i class="fas fa-user-shield"></i>Privacy </a></li>
+            <li><a href="admin/index.html"><i class="fas fa-key"></i> Admin Login</a></li>
+        </ul>
+    </div>
 
-           
-        </div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
-        <!-- Main Content Section -->
-        <main>
-            
-            <!-- Collections Header and Buttons -->
-            
-            <div class="collections-header">
-                
-               
-                
-            </div>
-            <a href="documents/index.html"><button class="button button-red">Ravi's regular stories</button></a><br><br>
-            <a href="insights/index.html"><button class="button button-red">Ravi's daily insights</button></a>
-
-
-            <!-- Collections Grid -->
-            <div id="collectionsGrid" class="collections-grid">
-                <!-- Collection items will be loaded here via JavaScript -->
-                <div class="loading">Loading collections...</div>
-            </div>
-        </main>
-
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Skeleton Loading -->
+        <div class="skeleton" style="height: 60px; width: 80%; margin-bottom: 30px;"></div>
         
+        <div class="skeleton" style="height: 40px; width: 60%; margin-bottom: 20px;"></div>
+        <div class="skeleton" style="height: 100px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 100px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 100px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 100px; margin-bottom: 40px;"></div>
+        
+        <div class="skeleton" style="height: 5px; margin-bottom: 30px;"></div>
+        
+        <div class="skeleton" style="height: 40px; width: 50%; margin-bottom: 20px;"></div>
+        <div class="skeleton" style="height: 30px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 30px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 30px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 30px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="height: 30px; margin-bottom: 15px;"></div>
 
-        <!-- Modals -->
-        <div id="adminModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Login as an Admin</h2>
-                    
-                    <button class="modal-close">&times;</button>
+        <!-- Actual Content -->
+        <div class="content">
+            <header>
+                <h1>EVERYTHING HERE IS PERSONALIZED AND PRIVATELY OWNED BY RAVI. TO HIM, YOU'RE JUST A STALKER.</h1>
+            </header>
+
+            <section class="personalized-section">
+                <h2><i class="fas fa-user-circle"></i> His Personalized Content</h2>
+                
+                <div class="personalized-items">
+
+                    <a href="documents/index.html">
+                    <div class="personalized-item">
+                        <h3><i class="fas fa-book"></i> His Regular Blogs</h3>
+                        <p>Personalized thoughts and experience of life</p>
+                    </div></a>
+                    <a href="insights/index.html">
+                    <div class="personalized-item">
+                        <h3><i class="fas fa-lightbulb"></i> His Daily Insights</h3>
+                        <p>Personalized activities of each day</p>
+                    </div></a>
+                     <a href="social/index.html">
+                    <div class="personalized-item">
+                        <h3><i class="fas fa-share-alt"></i> His Social Media Presence</h3>
+                        <p>Curated social media activity</p>
+                    </div></a>
+
+                    <a href="art-gallery/index.html">
+                    <div class="personalized-item">
+                        <h3><i class="fas fa-pencil"></i> His art gallary</h3>
+                        <p>Creativities (Sketches that he draw)</p>
+                    </div></a>
+                    <a href="favorite/index.html">
+                    <div class="personalized-item">
+                        <h3><i class="fas fa-video"></i> His favorite movies and songs</h3>
+                        <p>Movies and Songs that he really liked</p>
+                    </div></a>
+
+                    <a href="gudiya/about/index.html">
+                    <div class="personalized-item">
+                        <h3><i class="fas fa-robot"></i> Gudiya's documentation</h3>
+                        <p>Details about the personal chatbot project</p>
+                    </div></a>
                 </div>
-                <div class="modal-body">
-                    <form id="adminForm" class="admin-form">
-                        <div>
-                            <label for="adminPassword" class="form-label">Password</label>
-                            <input type="password" id="adminPassword" class="form-input" placeholder="Enter admin password">
-                            <p id="adminError" class="error-message"></p>
-                        </div>
-                        <div class="form-buttons">
-                            <button type="button" class="button button-cancel modal-close-btn">Cancel</button>
-                            <button type="submit" id="adminLoginButton" class="button button-green">Login</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="project-section">
+                <h2><i class="fas fa-code"></i> MY LATEST PROJECT</h2>
+                <p>As my curiosity about AI chatbots grew, I started exploring how they work and wondered if I could build something similar. But soon, I realized it wasn't as easy as I thought — it takes serious technical skills, a solid team, a decent budget, and a lot more. Still, I didn't give up. I dived into understanding the basic algorithms and got a sense of how the core systems work.</p>
+                <p>That's when I built a simple chatbot called "Gudiya." It's not some advanced AI, just a basic JavaScript project — but it's personal. Gudiya evaluates the people I know using documents I've prepared to train it. When a user enters their name, Gudiya tells them how I know them, when we met, and what our relationship is. It even checks if the person is connected with me on social media or not.</p>
+                <p>It's not a big project in the grand scheme of things, but when you build something with your own hands and it actually works — that hits different. Gudiya now works as my own little personal assistant.</p>
+            </section>
         </div>
-
-        <div id="privacyModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">PRIVACY POLICY</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-scroll-content">
-                        <h4 class="modal-subtitle">Ravi's Privacy </h4>
-                        <p class="modal-text">Ravi values his privacy, and as such, he has not shared any personal or sensitive information on this website. The content shared here consists only of stories and experiences that Ravi believes should be shared with others. Any personal information is securely protected, and to access such details, a password is required, which can only be obtained by directly contacting Ravi.</p>
-                        
-                        <h4 class="modal-subtitle">Information Collection</h4>
-                        <p class="modal-text">We respect your privacy too! Your information is never shared. We do not use third-party APIs or cookies to store your data. If you choose to share any personal information, such as your name, email, or phone number, it will be stored in our database only with your consent. We will never use your information without your permission. Additionally, this website does not run ads, so we do not use your information to show you targeted advertisements.</p>
-                        
-                        <h4 class="modal-subtitle">We might know you!</h4>
-                        <p class="modal-text">If you know Ravi or have interacted with him in the past, our system may recognize you. Our AI integration collects data from the stories shared on the website, and in some cases, you may be asked to enter your name to verify that you are part of Ravi’s circle. Don’t worry—this name is only used for verification and is not stored in the database. If you are a friend, relative, family member, neighbor, teacher, or someone close to Ravi, your name might appear in the system. However, it will not be made public without your explicit consent.</p>
-                        
-                        <h4 class="modal-subtitle">No signup or login</h4>
-                        <p class="modal-text">There is no mandatory sign-up or login required to access the website. You can browse the site freely without creating an account. However, Ravi does log in with a password to access the admin section of the website, where he can post updates and new content.</p>
-                        
-                        <h4 class="modal-subtitle"></h4>
-                        <p class="modal-text">Your privacy is important, and Ravi takes all necessary measures to ensure it is protected.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="button button-yellow modal-close-btn">I UNDERSTAND</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="aboutModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">ABOUT ME</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-scroll-content">
-                        <div class="about-header">
-                            <div class="about-avatar"><img src="images/photo1.jpg" class="profile-pic"></div>
-                            <div>
-                                <h4 class="about-name">Ravi Prasad Kalauni</h4>
-                                <p class="about-role">I share my insights here!</p>
-                                <p class="about-desc"></p>
-                            </div>
-                        </div>
-                        
-                        <h4 class="modal-subtitle">What is me?</h4>
-                        <p class="modal-text">I’m deeply passionate about uncovering uniqueness and creativity in everything around me. I create stories and share them on this website as a way to preserve my lifetime experiences. This space is more than just a platform—it’s where I store memories, thoughts, and personal reflections I want to share with you. It’s also a place where I can keep certain things private, moments and insights that might not be for everyone, but that I still want to hold on to.</p>
-                        
-                        <h4 class="modal-subtitle">My Mission</h4>
-                        <p class="modal-text">To create a space where stories can be shared authentically, connecting people through common interests and experiences while respecting everyone's privacy and personal boundaries.</p>
-                        
-                        <h4 class="modal-subtitle">Connect With Me</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="button button-yellow modal-close-btn">CLOSE</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Profile modal  -->
-
-        <div id="profileModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">ravi_kalauni404</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-scroll-content">
-                        <div class="about-header">
-                            <div class="about-avatar"><img src="images/photo1.jpg" class="profile-pic2"></div>
-                            <div>
-                                <h4 class="profile-name">Ravi Kalauni</h4>
-                                
-
-                                <p class="profile-bio">uninvited and unexpected, brigntened once, then vanished. may be a shooting star.</p>
-                                <p class="profile-bio" >Connected to  <a href="https://instagram.com/ravi_kalauni404" target="_blank" style="color: rgb(255, 103, 217);">Instagram</a> </p>
-                                <p class="about-desc"></p>
-                            </div>
-                        </div>
-                        
-                        <p class="modal-subtitle">Details</p>
-                        <p class="modal-text">
-                            • Studied at Brixton College<br>
-                            • Studied to Morning Glory Higher Secondary School Mahendranagar Kanchanpur<br>
-                            • From Mahendranagar, Nepal<br>
-                            • Single<br>
-                            • +977-**********<br>
-                            • *******@gmail.com<br>
-                            • Male<br>
-                            • Janaury 24<br>
-
-
-                        
-                        </p>
-                        
-                        <h4 class="modal-subtitle">All photos are private here!</h4>
-                        <p class="modal-text">
-                            
-                        </p>
-                        
-                        <h4 class="modal-subtitle">Social Links</h4>
-                        <div class="social-links">
-                            
-                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="button button-yellow modal-close-btn">CLOSE</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Message modal  -->
+    </div>
 <script>
        fetch("https://ipinfo.io/json?token=8087fefcfa2f0f")
           .then(response => response.json())
@@ -295,115 +143,6 @@
 
     
       </script>
-        <div id="messageModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Message Ravi</h2>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-scroll-content">
-                        <div class="message-header">
-                            <div class="message-container">
-                                
-                                <form>
-                                    <div class="input-group">
-                                        <i class="fas fa-user"></i>
-                                        <input type="text" placeholder="Your Name" required>
-                                    </div>
-                        
-                                    <div class="input-group">
-                                        <i class="fas fa-envelope"></i>
-                                        <input type="email" placeholder="Your Email" required>
-                                    </div>
-                        
-                                    <div class="input-group textarea-group">
-                                        <i class="fas fa-comment"></i>
-                                        <textarea placeholder="Your Message" required></textarea>
-                                    </div>
-
-                                    <div class="input-group file-group">
-                                        <input type="file" id="fileInput" accept="image/*">
-                                        <label for="fileInput">
-                                            <i class="fas fa-paperclip"></i> Attach Photo (Optional)
-                                        </label>
-                                        <span id="fileName">No file chosen</span>
-                                    </div>
-                        
-                        <p style="font-size: 13px; text-align: left; color: rgb(180, 180, 180);">This feature is designed for detailed messages, not quick chats. If you have a long-form inquiry, feel free to use it. Expect a response via email within a few hours, but it may take up to 48 hours depending on the query.</p>
-                        <br>
-                        <div class="checkbox-group">
-                        <input type="checkbox" id="understandCheckbox">
-                        <label for="understandCheckbox">I read above text</label>
-                        </div>
-                        
-                        <br>
-                                    <button type="submit" class="send-btn"><i class="fas fa-paper-plane"></i> Send</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <script>
-                            document.getElementById("fileInput").addEventListener("change", function() {
-                                let fileName = this.files[0] ? this.files[0].name : "No file chosen";
-                                document.getElementById("fileName").textContent = fileName;
-                            });
-                    
-                            document.getElementById("understandCheckbox").addEventListener("change", function() {
-                                document.getElementById("sendButton").disabled = !this.checked;
-                            });
-                        </script>
-                        
-                        
-                        <h4 class="modal-subtitle">Use for quick chats</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="button button-yellow modal-close-btn">CLOSE</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
- <!-- notification modal  -->
-
- <div id="notificationModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2 class="modal-title">Ask your name to our Gudiya</h2>
-            <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="modal-scroll-content">
-                <div class="about-header">
-                    <div class="notification">
-                        <p style="font-size: 11px;">Gudiya is an AI Assistant designed to understand and analyze the people connected to Ravi.
-                            She knows everyone Ravi knows and can assess your relationship with him — including how he sees you, when you two first met, and your current status with him.
-                            Don’t worry, your privacy is respected and it’s completely safe to use Gudiya.</p>
-                    </div><br>
-                    <div class="notification" >
-                        <a href="gudiya/knowme/index.html" style="color: rgb(255, 88, 88); background: red; font-weight: bold; text-decoration: none; "><p style="background-color: red; color: white; padding: 5px; border-radius: 3px; ">Ask to Gudiya</p></a>
-                    </div>
-                        
-                    
-                </div>
-                
-                
-            </div>
-            <div class="modal-footer">
-                <button class="button button-yellow modal-close-btn">CLOSE</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
