@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=${sheetName}`;
   
   let allStories = [];
-  let currentSortOrder = 'newest'; // 'newest' or 'oldest'
+  let currentSortOrder = 'newest';
+  const modal = document.getElementById('share-modal');
+  const closeModal = document.querySelector('.close-modal');
+  const shareUrlInput = document.getElementById('share-url');
+  const copyUrlBtn = document.getElementById('copy-url');
 
   // Show loading skeleton
   const container = document.getElementById("stories-container");
@@ -28,29 +32,67 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
 
+  // Check URL for story hash and scroll to it
+  function checkForStoryHash() {
+  const hash = window.location.hash;
+  if (hash) {
+    const storyElement = document.getElementById(hash.substring(1));
+    if (storyElement) {
+      setTimeout(() => {
+        storyElement.scrollIntoView({ behavior: 'smooth' });
+        // Add highlight class
+        storyElement.classList.add('highlight-story');
+        
+        // Remove the class after animation completes
+        setTimeout(() => {
+          storyElement.classList.remove('highlight-story');
+        }, 1500);
+      }, 500);
+    }
+  }
+}
+
+  // Modal functionality
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  copyUrlBtn.addEventListener('click', () => {
+    shareUrlInput.select();
+    document.execCommand('copy');
+    copyUrlBtn.textContent = 'Copied!';
+    setTimeout(() => {
+      copyUrlBtn.textContent = 'Copy';
+    }, 2000);
+  });
+
   fetch(url)
     .then(res => res.text())
     .then(data => {
       const jsonData = JSON.parse(data.substr(47).slice(0, -2));
       const rows = jsonData.table.rows;
       
-      // Process all rows - assuming structure: Title, Date, Content, Tags
       allStories = rows
-        .filter(row => row.c[1]?.v) // Filter rows with dates
+        .filter(row => row.c[1]?.v)
         .map((row, index) => {
           return {
             title: row.c[0]?.v || "Untitled",
             date: row.c[1]?.v || "",
             content: row.c[2]?.v || "",
-            tags: row.c[3]?.v || "", // Hidden tags column
+            tags: row.c[3]?.v || "",
             id: `story-${index}`
           };
         });
       
-      // Initial render with newest first
       renderStories(allStories, 'newest');
+      checkForStoryHash();
       
-      // Set up search functionality (searches title and hidden tags)
       const searchInput = document.getElementById('search-input');
       searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase().trim();
@@ -65,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      // Set up sort toggle
       const sortToggle = document.getElementById('sort-toggle');
       sortToggle.addEventListener('click', function() {
         currentSortOrder = currentSortOrder === 'newest' ? 'oldest' : 'newest';
@@ -75,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         renderStories(storiesToRender, currentSortOrder);
         
-        // Update button text and icon
         if (currentSortOrder === 'newest') {
           this.innerHTML = '<i class="fas fa-sort-amount-down"></i> Newest First';
         } else {
@@ -99,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     container.innerHTML = '';
     
-    // Sort stories based on the current sort order
     const sortedStories = [...stories].sort((a, b) => {
       const dateA = new Date(a.date);
       const dateB = new Date(b.date);
@@ -119,13 +158,15 @@ document.addEventListener('DOMContentLoaded', function() {
           ${story.content.length > 200 ? '<button class="toggle-content-btn">See more</button>' : ''}
         </div>
         <div class="story-footer">
+          <button class="share-btn">
+            <i class="fas fa-share-alt"></i> Share
+          </button>
           <i class="far fa-heart like-btn"></i>
         </div>
       `;
       
       container.appendChild(storyElement);
       
-      // Set up toggle content button if needed
       if (story.content.length > 200) {
         const button = storyElement.querySelector('.toggle-content-btn');
         const contentPreview = storyElement.querySelector('.content-preview');
@@ -143,12 +184,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
       
-      // Set up like button
       const likeBtn = storyElement.querySelector('.like-btn');
       likeBtn.addEventListener('click', function() {
         this.classList.toggle('far');
         this.classList.toggle('fas');
         this.classList.toggle('liked');
+      });
+      
+      // Add share functionality
+      const shareBtn = storyElement.querySelector('.share-btn');
+      shareBtn.addEventListener('click', () => {
+        const storyUrl = `${window.location.origin}${window.location.pathname}#${story.id}`;
+        shareUrlInput.value = storyUrl;
+        modal.style.display = 'block';
       });
     });
   }
