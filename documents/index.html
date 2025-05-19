@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documents</title>
+  <title>Ravi's Documents | Personal Stories</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -18,7 +19,7 @@
   </nav>
 
   <div class="description">
-    Here, Ravi writes about his life — the things he has felt and is currently experiencing. These are personal stories that he chooses to share with the public.
+    <p>Here, Ravi writes about his life — the things he has felt and is currently experiencing. These are personal stories that he chooses to share with the public.</p>
   </div>
 
   <div class="controls">
@@ -48,6 +49,22 @@
         <div class="skeleton-content"></div>
         <div class="skeleton-content" style="width: 70%"></div>
         <div class="skeleton-footer"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="share-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Share this story</h3>
+      <div class="share-url-container">
+        <input type="text" id="share-url" readonly>
+        <button id="copy-url">Copy</button>
+      </div>
+      <div class="social-share">
+        <button class="social-btn twitter"><i class="fab fa-twitter"></i> Twitter</button>
+        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+        <button class="social-btn linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
       </div>
     </div>
   </div>
