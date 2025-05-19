@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Khand', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 body {
