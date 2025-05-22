@@ -33,20 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
 
   // Check URL for story hash and scroll to it
-  function checkForStoryHash() {
+ function checkForStoryHash() {
   const hash = window.location.hash;
   if (hash) {
     const storyElement = document.getElementById(hash.substring(1));
     if (storyElement) {
       setTimeout(() => {
-        storyElement.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the element with some offset from top
+        window.scrollTo({
+          top: storyElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+        
         // Add highlight class
         storyElement.classList.add('highlight-story');
         
         // Remove the class after animation completes
         setTimeout(() => {
           storyElement.classList.remove('highlight-story');
-        }, 1500);
+        }, 2000);
       }, 500);
     }
   }
@@ -79,16 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
       const rows = jsonData.table.rows;
       
       allStories = rows
-        .filter(row => row.c[1]?.v)
-        .map((row, index) => {
-          return {
-            title: row.c[0]?.v || "Untitled",
-            date: row.c[1]?.v || "",
-            content: row.c[2]?.v || "",
-            tags: row.c[3]?.v || "",
-            id: `story-${index}`
-          };
-        });
+  .filter(row => row.c[1]?.v)
+  .map((row) => {
+    // Generate a stable ID from the title (convert to lowercase, replace spaces with dashes)
+    const idFromTitle = row.c[0]?.v 
+      ? row.c[0].v.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+      : `story-${Date.now()}`;
+    
+    return {
+      title: row.c[0]?.v || "Untitled",
+      date: row.c[1]?.v || "",
+      content: row.c[2]?.v || "",
+      tags: row.c[3]?.v || "",
+      id: idFromTitle
+    };
+  });
       
       renderStories(allStories, 'newest');
       checkForStoryHash();
@@ -200,4 +210,24 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+});
+
+// Add this near the top with your other DOM element selections
+const goToTopBtn = document.getElementById('go-to-top');
+
+// Add this scroll event listener (can go near the bottom with your other event listeners)
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    goToTopBtn.classList.add('visible');
+  } else {
+    goToTopBtn.classList.remove('visible');
+  }
+});
+
+// Add click handler for the button
+goToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
