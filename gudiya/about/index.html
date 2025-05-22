@@ -1,40 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gudiya AI Documentation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
 <body>
-    <!--header-->
-    <div class="heading">
-        <a href="../../index.html"><button class="top-btn">Go to home</button></a>
-        <i class="fa-solid fa-house"></i>
-    </div>
-    <!--main body-->
 
-    <div class="main-body">
-<!--image portion-->
-<div class="image-area">
-    <img src="../../images/gudiya-logo.jpg" class="gudiya-logo">
-    <div class="q-collection1">Her Question Collection is available!</div>
-    <div class="q-collection2">She has question answer collection for now! Click
-        to investigate!</div>
-</div>
-<div class="text-area">
-    <h1>MEET GUDIYA!</h1>
-    <P><b class="g" style="font-size: 30px;">G</b>udiya is a highly advanced AI assistant designed exclusively for Ravi, powered by the ChatGPT model. She is deeply trained in Ravi’s environment, understanding everything he chooses to share or is comfortable making public. Whether it’s his experiences, thoughts, or projects, Gudiya knows it all and serves as a digital extension of his knowledge.<br><br>
+  <header>
+    <h1><i class="fas fa-robot"></i> Gudiya AI Documentation</h1>
+    <p>Detailed documentation about how Gudiya AI chatbot works.</p>
+  </header>
 
-        But that’s not all! If you have ever crossed paths with Ravi—whether as a friend, relative, colleague, or in any shared moment—there’s a chance Gudiya knows about you too! She can recall the stories, interactions, and memories associated with Ravi, offering you insights into how you are connected to him. Curious to know what she remembers? Just ask!<br><br>
-        
-        Gudiya isn’t just an AI; she’s a storyteller, a digital archive, and a bridge connecting Ravi’s world with those who are a part of it. Dive in and explore your connection with Ravi through Gudiya’s perspective!
-    </P>
+  <nav>
+    <a href="#overview"><i class="fas fa-eye"></i> Overview</a>
+    <a href="#purpose"><i class="fas fa-bullseye"></i> Purpose</a>
+    <a href="#stack"><i class="fas fa-cogs"></i> Tech Stack</a>
+    <a href="#ui"><i class="fas fa-desktop"></i> UI</a>
+    <a href="#workflow"><i class="fas fa-sync-alt"></i> Workflow</a>
+    <a href="#privacy"><i class="fas fa-shield-alt"></i> Privacy</a>
+    <a href="#files"><i class="fas fa-folder-open"></i> Files</a>
+  </nav>
 
-</div>
+  <main>
+    <section id="overview">
+      <h2><i class="fas fa-eye"></i> Overview</h2>
+      <p>Gudiya AI is a web-based chatbot designed to simulate conversations that explore a user’s connection with a person. It fetches relationship-related data from a backend and responds in a conversational tone.</p>
+    </section>
+
+    <section id="purpose">
+      <h2><i class="fas fa-bullseye"></i> Purpose</h2>
+      <ul>
+        <li>Analyze personal connections with Ravi</li>
+        <li>Offer a simulated conversational experience</li>
+        <li>Test frontend-based chatbot capabilities</li>
+      </ul>
+    </section>
+
+    <section id="stack">
+      <h2><i class="fas fa-cogs"></i> Tech Stack</h2>
+      <table>
+        <thead>
+          <tr><th>Component</th><th>Technology</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Structure</td><td>HTML5</td><td>Page layout</td></tr>
+          <tr><td>Styling</td><td>CSS3</td><td>User interface and design</td></tr>
+          <tr><td>Logic</td><td>JavaScript</td><td>Functionality and chat logic</td></tr>
+          <tr><td>Backend</td><td>Google Apps Script</td><td>Data fetching</td></tr>
+          <tr><td>Storage</td><td>LocalStorage</td><td>Save chat history</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ui">
+      <h2><i class="fas fa-desktop"></i> User Interface</h2>
+      <ul>
+        <li>Responsive layout with dark/light theme potential</li>
+        <li>Sidebar menu with navigational links</li>
+        <li>Chat container for displaying messages</li>
+        <li>Quick replies for guided interaction</li>
+      </ul>
+    </section>
+
+    <section id="workflow">
+      <h2><i class="fas fa-sync-alt"></i> Workflow</h2>
+      <ol>
+        <li>Gudiya initializes and shows welcome message</li>
+        <li>User sends a message or name</li>
+        <li>Bot checks if it’s a name or general query</li>
+        <li>If valid, fetches data from the Google Apps Script API</li>
+        <li>Response is displayed and chat is saved locally</li>
+      </ol>
+    </section>
+
+    <section id="privacy">
+      <h2><i class="fas fa-shield-alt"></i> Privacy</h2>
+      <ul>
+        <li>No personal data is stored on servers</li>
+        <li>Only name is sent to the backend for response</li>
+        <li>Local chat history saved only on user’s browser</li>
+      </ul>
+    </section>
+
+    <section id="files">
+      <h2><i class="fas fa-folder-open"></i> File Descriptions</h2>
+      <table>
+        <thead>
+          <tr><th>File</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>index.html</td><td>Main chatbot UI</td></tr>
+          <tr><td>styles.css</td><td>Styles for chatbot</td></tr>
+          <tr><td>script.js</td><td>Core chatbot logic</td></tr>
+          <tr><td>documentation.html</td><td>This documentation page</td></tr>
+          <tr><td>docs-style.css</td><td>Styles for documentation</td></tr>
+          <tr><td>docs-script.js</td><td>Optional interactivity for docs</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gudiya AI. Created by Ravi | All rights reserved.</p>
+  </footer>
+
+  <script src="docs-script.js"></script>
 </body>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gochi+Hand&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IN:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
 </html>
