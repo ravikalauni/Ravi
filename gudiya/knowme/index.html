@@ -3,52 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gudiya 0.01</title>
+    <title>Gudiya AI Chat</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
-        <button class="close-btn" onclick="toggleMenu()">✖</button>
-        <ul>
-            <li><a href="../../index.html">Leave this page</a></li>
-            <li><a href="../about/index.html">About Gudiya</a></li>
-            <li><a href="../privacy/index.html">Your privacy</a></li>
+        <div class="sidebar-header">
+            <div class="sidebar-title">Menu</div>
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../about/index.html"><i class="fas fa-info-circle"></i> About Gudiya</a></li>
+            <li><a href="../privacy/index.html"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+            <li><a href="#" onclick="clearChat()"><i class="fas fa-trash-alt"></i> Clear Chat</a></li>
         </ul>
         <div class="bugs">
-        <b>Bugs you may face:</b>
-            <p>Sometimes slow responce time</p>
-            <p>Sometimes multiple text appearing (like: Yoouu mmeeaann TThhaattttt ppeeersssonnnn???)</p>
-            <p>Sometimes no responce</p>
-        
-    </div>
-    </div>
-    <p class="subtitle" style="text-align: right; cursor: pointer;">Search by your name </p>
-    
-    <div class="container">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        
-        <h1>GUDIYA 0.1 </h1>
-        
-
-        <p class="subtitle">Trust me! I can retrieve and analyze your connection with Ravi, it includes:</p>
-        <ul>
-            <li>Verifying if Ravi knows you.</li>
-            <li>Identifying when and how you both met.</li>
-            <li>Determining your relationship with him.</li>
-            <li>Interpreting his perception of you.</li>
-            <li style="color: yellow;">It may take time to think for 5-10 seconds.</li>
-        </ul>
-        <div class="output-container" id="result"></div>
-        <div class="input-container" >
-            <form action="" name="submit-to-google-sheet" id="form">
-            <input type="text" id="nameInput" placeholder="Hey, just drop your name here!" name="Asked Names to Gudiya">
-            <button onclick="checkName()" type="submit">➤</button>
-        </form>
+            <h4><i class="fas fa-bug"></i> Known Issues</h4>
+            <div class="bug-item">
+                <i class="fas fa-clock"></i> Occasionally slow response times
+            </div>
+            <div class="bug-item">
+                <i class="fas fa-keyboard"></i> Duplicate text in responses
+            </div>
+            <div class="bug-item">
+                <i class="fas fa-exclamation-circle"></i> No response in rare cases
+            </div>
         </div>
-        <p class="note">Gudiya only supports names, not conversation.</p>
     </div>
+
+    <!-- Main Chat Interface -->
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="bot-avatar">G</div>
+            <div class="chat-title">Gudiya AI</div>
+            <div class="chat-status">Online</div>
+        </div>
+        
+        <div class="messages" id="messages">
+            <!-- Messages will be inserted here by JavaScript -->
+            <div class="message bot-message">
+                Hi there! I'm Gudiya. I can help you analyze your connection with Ravi. 
+                <div class="message-meta">Today at <span class="message-time">10:30 AM</span></div>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" class="message-input" id="messageInput" placeholder="Type your message here..." autocomplete="off">
+            <button class="send-button" id="sendButton">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
